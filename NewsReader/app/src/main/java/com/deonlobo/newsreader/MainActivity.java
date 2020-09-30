@@ -103,12 +103,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
 
-            String result= "";
             URL url ;
             HttpURLConnection urlConnection = null;
 
             try {
-
+                String result= ""; // Init inside the try, so its safe
+                
                 url = new URL(params[0]);
 
                 urlConnection = (HttpURLConnection) url.openConnection();
